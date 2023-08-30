@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		
+		<h1>Welcome to <span class="text-gradient">Garden</span></h1>
+		<p class="instructions">
+			How do we work?</p>
+		<section>
+			<div class="section-header">
+				<h2>
+					Planning and Analysis
+				</h2>
+				<a href="/planning-analysis">More</a>
+			</div>
+
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Problem Discovery"
+				body="Finding out where if there is an problem worth solving."
+			/>
+			<div class="description">
+				<h5>Inputs:</h5>
+				<ul>
+					<li>data</li>
+				</ul>
+				<h5>Output:</h5>
+				<ul><li>
+					data	
+				</li></ul>
+			</div>
+			<Card
+				href="https://docs.astro.build/"
+				title="Ideation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			
+			<Card
+				href="https://docs.astro.build/"
+				title="Viability evaluation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://docs.astro.build/"
+				title="Feasibility evaluation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			
+			<Card
+				href="https://docs.astro.build/"
+				title="Ranking solutions"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://docs.astro.build/"
+				title="Prototyping"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+		</ul>
+	</section>
+		<h2>
+			Development
+		</h2>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Problem Discovery"
+				body="Finding out where if there is an problem worth solving."
+			/>
+			<Card
+				href="https://docs.astro.build/"
+				title="Planning"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		/* color: white; */
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: 800;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	.text-gradient {
+		font-weight: 800;
+		color: #000;
+		/* background-image: var(--mild-gradient); */
+		/* -webkit-background-clip: text; */
+		/* -webkit-text-fill-color: transparent; */
+		/* background-size: 400%; */
+		/* background-position: 0%; */
+	}
+	
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgb(204, 207, 210);
+		color: black;
+		padding: 0.3em 0.4em;
+	}
+
+	.description {
+		line-height: 1rem;
+	}
+	.description h5 {
+		line-height: 1rem;
+		margin: 1rem;
+	}
+	.description ul {
+		line-height: 1rem;
+		margin: 0;
+		padding: 0 16px;
+		font-size: 1rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.section-header > h2{
+		display: inline-block;
+	}
+	.section-header > a{
+		display: inline-block;
+		text-decoration: none;
+	}
+	.section-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>
